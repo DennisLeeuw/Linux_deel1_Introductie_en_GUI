@@ -1,0 +1,57 @@
+Wat Linux en het GNU project bijzonder maken is het feit dat alle code open source is. Je mag er mee doen en laten wat
+je wil, je mag het aanpassen, je kan het inzien en je mag het gebruiken en voor het merendeel nog gratis ook. Dat is
+natuurlijk bijzonder in een wereld die draait om commercie. Waarom is het dan toch zo populair? Om daar een goed
+antwoord op te geven moeten we eerst eens kijken wat software nu eigenlijk is en hoe het werkt.\par
+
+De eerst versies van Unix zoals geschreven door Ken Thompson, Dennis Ritchie en de overige leden
+van het team bij Bell Labs was geschreven is assembly language. Assembly language is een taal die heel dicht ligt tegen
+wat computers snappen en daarmee altijd systeemafhankelijk is. In de tijd dat Unix werd ontwikkeld geloofde men dat je
+assembly language nodig had om een besturingssysteem snel genoeg te laten zijn. Dennis Ritchie nam de taal B ontwikkeld
+door Ken Thompson, maakte verbeteringen en kwam met \index{C}C in
+1972. In 1973 kwam Unix versie 4 uit die voor een groot deel herschreven was in C en daarmee aantoonde dat een hogere
+programmeertaal gebruikt kon worden om besturingssystemen in te schrijven, maar belangrijker nog omdat er een hogere
+programmeertaal werd gebruikt was Unix opeens portable naar andere machines.\par
+
+Voor het programmeren in C heb je een C-compiler, een linker en een C-Library nodig. Library is het Engelse woord voor
+bibliotheek een C-bibliotheek bevat een aantal standaardfuncties die je kan gebruiken in een programma, zo hoeft niet
+elke programmeur de printf functie te programmeren. Functies kunnen hergebruikt worden door het aanroepen van de
+library. Een heel simpel programma als Hello World ziet er in C zo uit:
+
+\lstinputlisting[language=C]{helloworld.c}
+
+De printf functie die de woorden ``Hello World!'' op het scherm laat zien is zo'n standaard functie uit de C-Library.\par
+
+De compiler is verantwoordelijk voor het omzetten van de C-code in machinetaal, het compileren,
+en de linker zorgt ervoor dat de functie uit de C-library gelinkt wordt aan het programma dat je geschreven hebt. En zo
+kunnen we dus simpel stukjes programmatuur (functies) hergebruiken door er een library van te maken.\par
+
+Er zijn twee manieren waarop de linker ervoor kan zorgen dat de printf-functie gelinked kan worden met je programma. Het
+kan statisch en dynamisch. Statisch betekend dat een kopie van de functie toegevoegd wordt aan je programma. Je
+programma wordt daarmee onafhankelijk van de C-library. Dynamisch linken betekent dat in je programma een verwijzing
+komt te staan naar de printf-functie in die specifieke C-library. Je C-programma wordt zo afhankelijk van de specifieke
+versie van de C-library die aanwezig is op je systeem. Dat is geen probleem zolang je het programma gebruikt op
+systemen die dezelfde C-library hebben als jij, zoals het geval is bij mensen die dezelfde distributie gebruiken als
+jij. Het voordeel is dat je eigen programma veel kleiner wordt en dus makkelijker te verspreiden is. Ook als er een
+kleine wijziging gemaakt wordt in de printf-functie die geen invloed heeft op de binaire syntax van de printf-functie
+dan kan je programma gelijk gebruik maken van deze verbetering doordat je alleen de C-library update. \ Je hoeft je
+programma dan niet opnieuw te bouwen, compileren.\par
+
+Daar zit het verschil in API en ABI compatibiliteit. De API van een functie is de syntax van de functie, als deze
+verandert dan moet je je programma opnieuw compileren en als het tegenzit moet je zelfs je code aanpassen. ABI
+compatibiliteit is veel complexer, maar kleine wijzigingen kunnen zoals gezegd soms doorgevoerd worden zonder dat de
+applicatie er last van heeft.\par
+
+Een programma dat alleen als binary, dus als compilde versie wordt uitgeleverd kan dus alleen draaien op systemen die
+gelijk zijn aan het systeem waarop de code gecompiled is, zoals op Windows en Mac OS X systemen gebeurt. Ook de
+applicaties op je telefoon zijn vaak afhankelijk van de juiste versie van het OS.\par
+
+Als je echter de beschikking hebt over de broncode dan kan je die code ook compilen op je eigen computer en zorgen dat
+die ook werkt op jou systeem. Je bent dan niet meer afhankelijk van een leverancier die jou systeem moet ondersteunen.
+Soms moet je wel wat aanpassingen maken om het geheel goed te laten werken. De grafische interface van Windows is heel
+anders dan die van Mac OS X, en daar zit dan ook een heel andere library onder. Dus als je een Windows applicatie op
+een Mac wil compileren zul je wel wat programmeerwerk moeten doen. Maar als ik een applicatie heb die geschreven is
+voor Debian kan ik hem meestal zonder enige wijziging compileren op CentOS.\par
+
+En daar zit de kracht van open source door programma's, met het delen van de \ broncode wordt de reikwijdte van systemen
+waarop de software kan draaien veel groter. Maar zoals gezegd moet je soms wel wijzigen maken om het te laten werken,
+dus het is bijna een eis dat je de software mag aanpassen en dat is dan ook in veel open source licenties vastgelegd.

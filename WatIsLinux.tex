@@ -1,0 +1,70 @@
+Om de vraag te kunnen beantwoorden wat Linux is moeten we een stukje terug in de tijd en wel naar het eind van de jaren '60 uit de vorige eeuw. Een groepje programmeurs werkend aan een project bij Bell Labs van AT\&T genaamd Multics zaten op een dood spoor of beter Bell Labs vond het een dood spoor en cancelde het project, dus schreef een van die programmeurs in ongeveer een maandtijd in 1969 een simpeler alternatief. De ontwikkelaar was Ken Thompson die samen met Dennis Ritchie een team leidde.\par
+
+Een ander lid van het team Brian Kernighan schijnt met de naam Unics gekomen te zijn als woordgrap op Multics. Hoe de naam ooit \index{Unix}Unix is geworden is niet bekend.\par
+
+De gedachte achter Unix is ooit in 1979 mooi beschreven door Dennis Ritchie:
+\selectlanguage{english}
+What we wanted to preserve was not just a good environment in which to do programming, but a system around which a fellowship could form. We knew from experience that the essence of communal computing, as supplied by remote-access, time-shared machines, is not just to type programs into a terminal instead of a keypunch, but to encourage close communication.
+\selectlanguage{dutch}
+Het ging dus om een systeem waarop samengewerkt kon worden en dan vooral geprogrammeerd.\par
+
+Uit de wens vanuit de organisatie om tekst te kunnen verwerken werd het systeem uitgebreid met tekstverwerkingsfuncties
+en een eerste tekst editor en tekst formatter. Hieruit blijkt meteen de filosofie achter Unix. Maak kleine tools die
+\'e\'en ding goed doen en gebruik ze gezamenlijk om complexe dingen te doen. Er is dus een editor en een formatter. De
+eerste tekst formatter heette roff en deze werd als snel opgevolgd door troff, die je nog steeds terug vindt op de
+systemen. De unix manual-pages, waarover later meer, worden opgemaakt met behulp troff.\par
+
+De eerste versies van Unix waren geschreven in assembly, in 1974 kwam versie 4 uit die volledig herschreven was in de
+taal \index{C}C. Door het gebruik van C werd het mogelijk Unix ook op andere systemen te draaien dan het PDP systeem
+waar het voor geschreven was. Unix kon de wereld veroveren.\par
+
+Bell Labs mocht door juridische afspraken geen commerci\"ele zaken ondernemen buiten de telefonie, daardoor werd de
+vraag naar Unix beantwoord door alleen geld te rekenen voor de media en het verzenden van het systeem, en niet voor het
+product zelf.\par
+
+Omdat het systeem goedkoop verkrijgbaar was was het een ideaal systeem voor universiteiten. Door studenten en andere
+gebruikers werden er in de loop van de tijd meer en meer programma's geschreven en ook anderen gingen collecties
+samenstellen die ze ook weer distribueerden. Deze collecties van programma's werden dan ook distributies genoemd. Een
+van de meest bekende van deze distributies is die van University of California die ontwikkeld werd door de Berkeley
+Computer Systems Research Group, de Berkeley Software Distribution of afgekort \index{BSD}BSD.\par
+
+Een klein bedrijfje in de US was een van de eerste bedrijven die Unix naar de microcomputer, ofwel de PC, bracht. Hun
+Unix versie heette Xenix en het bedrijf stond bekend als Microsoft. Dit naast de grote bedrijven als IBM (AIX) en HP
+(HPUX) die hun eigen unix versie hadden voor de grote machines.\par
+
+De vele verschillende systemen die ontstonden waren voor de eindgebruikers een ramp. Wat op het ene systeem aanwezig was
+was op een andere niet aanwezig en omgekeerd. Een Unix-applicatie op de ene distributie werkte werkte niet zomaar ook
+op een andere. Gebruikers wilden standaardisatie. Software moest uitwisselbaar zijn. De standaard die ontstond in 1988
+is de \index{POSIX}POSIX standaard van de IEEE.\par
+
+In 1983 bracht Richard Stallman een nieuw project in de wereld genaamd het \index{GNU}GNU Project, waarbij GNU staat
+voor GNU's not Unix! Dit om aan te geven dat het gebaseerd is op Unix maar geen Unix componenten bevat. GNU is een from
+scratch geschreven systeem dat volledig open source is. Dat wil zeggen dat van het hele systeem alle broncode
+beschikbaar is, hierdoor kan het gebruikt worden als studiemateriaal. Het heeft tevens het voordeel dat iedereen fouten
+uit de software kan halen en aan de software kan bijdragen om het beter te maken. Dit is dan ook altijd de strijd van
+Richard Stallman geweest en zijn daarvoor opgerichte organisatie The \index{Free Software Foundation}Free Software
+Foundation, software moest vrij zijn en voor iedereen toegankelijk. Om dit te bewerkstelligen stelde Stallman het
+\index{copyleft}copyleft in, in plaats van het copyright en maakte een licentie genaamd de \index{GPL}GPL, GNU Public
+License, die ervoor moest zorgen dat de gemaakte software niet zomaar weer gesloten kon worden.\par
+
+De software werd door vele verschillende distributies in die tijd gebruikt om software van Unix geheel of gedeeltelijk
+te vervangen. Missend onderdeel was echter jarenlang een kernel. Het stukje software dat ligt tussen de
+gebruikersinterface en de hardware.\par
+
+In 1991 schreef een Finse student met de naam Linus Torvalds een stukje in een news-group dat hij bezig was met zo'n
+kernel. Niets groots zei hij, maar wel onder de GPL-licentie van de Free Software Foundation. Velen werden aangetrokken
+door dit project en gingen Linus helpen zijn kernel verder uit te breiden. Die kernel ging naar de maker heten en werd
+\index{Linux}Linux.\par
+
+Uiteindelijk is Linux dus de abstractie laag tussen hardware en de gebruikers interface, met daarbij meestal veel van de
+software uit het GNU-project. Fanatiekelingen willen dan ook graag dat je spreekt van GNU/Linux, maar de hele wereld
+spreekt meestal gewoon over Linux als we een systeem bedoelen met een Linux kernel.\par
+
+De Linux kernel kan natuurlijk gecombineerd worden met vele software pakketten en dat gebeurde dan ook. En net als bij
+Unix werden de systemen die ontstonden distributies genoemd. E\'en van de eerste distributies was Slackware, later
+volgde anderen zoals SuSE, Debian, Red Hat, CentOS, Ubuntu en nog vele vele anderen.\par
+
+Het meest gebruikte Unix desktop systeem is ongetwijfeld Darwin het open source besturingssysteem van Apple dat de basis
+vormt voor Mac OS X en op de telefoon is dat Android het systeem van Google dat een Linux kernel en andere open source
+tools onderwater gebruikt.\par
+

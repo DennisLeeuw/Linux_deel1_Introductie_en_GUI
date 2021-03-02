@@ -1,0 +1,172 @@
+\documentclass[a4paper,12pt,twoside,openright,titlepage]{book}
+
+%Additional packages
+\usepackage[ascii]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[dutch,english]{babel}
+\usepackage{imakeidx}
+\usepackage{syntonly}
+\usepackage[official]{eurosym}
+%\usepackage[graphicx]
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\usepackage{float}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, filecolor=blue, urlcolor=blue, pdftitle=, pdfauthor=, pdfsubject=, pdfkeywords=}
+\usepackage{tabularx}
+\usepackage{scrextend}
+\addtokomafont{labelinglabel}{\sffamily}
+\usepackage{listings}
+\usepackage{adjustbox}
+\usepackage{color}
+
+% Define colors
+\definecolor{ashgrey}{rgb}{0.7, 0.75, 0.71}
+
+% Listing style
+\lstset{
+  backgroundcolor=\color{ashgrey},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}; should come as last argument
+  basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  frame=single,	                   % adds a frame around the code
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+}
+
+% Uncomment for production
+% \syntaxonly
+
+% Style
+\pagestyle{headings}
+
+% Turn on indexing
+\makeindex
+
+% Define document
+\author{D. Leeuw}
+\title{Linux introductie voor systeembeheerders}
+%\subtitle{Linux voor MBO niveau 4 en het LPI Linux Essentials examen}
+%\subject{Een Praktische Gids}
+\date{\today\\v.0.2.0}
+
+\begin{document}
+\selectlanguage{dutch}
+
+\maketitle
+
+\copyright\ 2020 Dennis Leeuw\\
+
+\begin{figure}
+\includegraphics[width=0.3\textwidth]{linuxreader-img001.png}
+\end{figure}
+
+\bigskip
+
+\input{licentie}
+
+%%%%%%%%%%%%%%%%%%%
+%%% Introductie %%%
+%%%%%%%%%%%%%%%%%%%
+
+\frontmatter
+\chapter{Over dit Document}
+\input{OverDitDocument}
+\input{DocChanges}
+
+%%%%%%%%%%%%%%%%%
+%%% De inhoud %%%
+%%%%%%%%%%%%%%%%%
+\tableofcontents
+
+\mainmatter
+\chapter{Inleiding}
+\input{inleiding}
+
+\chapter{Wat is Linux?}
+\input{WatIsLinux}
+
+\chapter{Waarom Open Source?}
+\input{WaaromOpenSource}
+\section{Gebruiksrechten en licenties}
+\input{Licenties}
+\subsection{MIT}
+\input{MIT}
+\subsection{BSD}
+\input{BSD}
+\subsection{GPL}
+\input{GPL}
+\section{Creative Commons}
+\input{CreativeCommons}
+\section{Open standaarden}
+\input{OpenStandaarden}
+\section{Open data}
+\input{OpenData}
+\section{Open Source Business Model}
+\input{OpenSourceBusinessModel}
+
+\chapter{Distributies}
+\input{Distributies}
+\section{Debian}
+\input{Debian}
+\section{Red Hat}
+\input{RedHat}
+\section{OpenSuSE}
+META: ToDo
+
+\chapter{Installatie van CentOS op Virtual Box}
+\section{Download CentOS boot image}
+\input{CentOSDownloadISO}
+\section{Aanmaken van een NAT netwerk}
+\input{VirtualBoxNAT}
+\section{Aanmaken van een Virtual Machine}
+\input{VirtualBoxVMCreate}
+\section{CentOS installatie}
+\input{CentOSInstallation}
+
+\chapter{Werken met de grafische interface}
+\input{GIWerkenMet}
+\section{Zoeken van bestanden of applicatie}
+\input{GIZoeken}
+\section{Systeem configuratie}
+\input{GISysConfig}
+\section{The Dash}
+\input{GIDash}
+\section{Webbrowsers}
+\input{GIWebbrowsers}
+\section{E-mail clients}
+\input{GIEMailClients}
+\section{Office pakketten}
+\input{GIOffice}
+\section{Grafische applicaties}
+\input{GIGrafischeApps}
+\subsection{The GIMP}
+\input{GIGIMP}
+\subsection{Inkscape}
+\input{GIInkscape}
+\section{Multimedia}
+\subsection{Rhytmbox}
+\subsection{VLC}
+\subsection{KODI}
+\section{Desktop publishing}
+\subsection{Scribus}
+\input{GIScribus}
+\section{Bestandsbrowser}
+\section{Installeren en updaten van software}
+\subsection{Installeren van The GIMP}
+\input{GIInstallatieGIMP}
+\section{Terminal}
+\input{GI_CentOS_Terminal}
+\section{Show applications}
+\input{GI_CentOS_ShowApplications}
+
+%%%%%%%%%%%%%%%%%%%%%
+%%% Index and End %%%
+%%%%%%%%%%%%%%%%%%%%%
+\backmatter
+\printindex
+\end{document}
+
+%%% Last line %%%
